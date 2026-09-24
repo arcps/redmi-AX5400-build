@@ -48,9 +48,6 @@ lrzsz
 mkisofs
 msmtp
 nano
-ninja-build
-p7zip
-p7zip-full
 patch
 pkgconf
 python3

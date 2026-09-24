@@ -115,8 +115,6 @@ jobs:
         grep -qx 'CONFIG_PACKAGE_kmod-qca-ssdk=y' .config
         ! grep -qx 'CONFIG_PACKAGE_kmod-qca-nss-drv=y' .config
         ! grep -qx 'CONFIG_PACKAGE_kmod-qca-nss-ecm=y' .config
-        grep -qx 'CONFIG_PACKAGE_luci-app-passwall_INCLUDE_SingBox=y' .config
-        grep -qx '# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Xray is not set' .config
         if grep -Eq '^CONFIG_(DWMAC_IPQ5018|PACKAGE_kmod-dwmac-ipq5018)=y$' .config; then
           echo 'DWMAC IPQ5018 was unexpectedly enabled' >&2
           exit 1

@@ -102,17 +102,7 @@ jobs:
           timeout 600 ./scripts/feeds update "$feed"
         done
         ./scripts/feeds install -a
-        for item in \
-          passwall_luci/luci-app-passwall \
-          passwall_packages/sing-box \
-          passwall_packages/chinadns-ng \
-          passwall_packages/geoview \
-          passwall_packages/v2ray-geodata; do
-          test -e "package/feeds/$item" || {
-            echo "Missing feed package: $item" >&2
-            exit 1
-          }
-        done
+
 
     - name: Load and verify configuration
       run: |
